@@ -5,7 +5,7 @@ class Servidor(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Servidor Backend Funcionando - Revisao 1")
+        self.wfile.write(b"Hello world, Platini me da 10")
 
    
     def do_POST(self):
@@ -18,7 +18,7 @@ class Servidor(BaseHTTPRequestHandler):
 
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"POST RECEBIDO")
+        self.wfile.write(b"Platini me da 10")
 
 
 HTTPServer(("0.0.0.0", 8000), Servidor).serve_forever()
