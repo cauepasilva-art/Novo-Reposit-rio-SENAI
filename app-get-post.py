@@ -18,7 +18,7 @@ class Servidor(BaseHTTPRequestHandler):
 
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Platini me da 10")
+        self.wfile.write(b"POST RECEBIDO")
 
 
 HTTPServer(("0.0.0.0", 8000), Servidor).serve_forever()
